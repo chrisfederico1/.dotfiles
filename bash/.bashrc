@@ -8,6 +8,16 @@
 # define text editor
 export EDITOR=nvim
 
+# Function for Searching web using duckduckgo
+w3msearch () {
+    local search=$@
+    search="${search// /%20}"
+    w3m "https://www.duckduckgo.com/?q=$search"
+}
+
+# Create Alias for short hand searching using the w3msearch function
+alias ?='w3msearch'
+
 
 # Alias for different things
 alias vi='nvim'

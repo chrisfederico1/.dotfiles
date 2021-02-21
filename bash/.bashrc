@@ -8,7 +8,7 @@
 # define text editor
 export EDITOR=nvim
 
-# Function for Searching web using duckduckgo
+# Function for Searching the web using w3m text browser in your terminal
 w3msearch () {
     local search=$@
     search="${search// /%20}"

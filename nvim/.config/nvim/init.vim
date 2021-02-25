@@ -4,12 +4,12 @@ syntax on
 set spell
 set laststatus=2
 set noerrorbells
-set nu
+set nu rnu
 set nowrap
 set incsearch
 set smartindent
 set tabstop=4 softtabstop=4
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set smartcase
 

@@ -33,4 +33,6 @@ alias grep='grep --color=auto'
 #PS1='[\u@\h \W]\$ '
 
 # New Bash colors
-export PS1="\e[0;32m[\u@\h \W]\$ \e[m"
+#export PS1="\e[01;32m[\u@\h \W]\$ \e[m"
+export PS1="\[\033[01;32m\][\u@\h\[\033[00m\]:\[\033[01;34m\]\w]\[\033[00m\]\$"
+

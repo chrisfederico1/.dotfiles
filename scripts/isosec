@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Date to ZULU/GMT time for my zets
+exec date -u +%Y%m%d%H%M%S "$@"

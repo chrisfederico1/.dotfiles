@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# define text editor
+# Environment Variables 
+export SCRIPTS=~/.dotfiles/scripts
 export EDITOR=nvim
 
 # Function for Searching the web using w3m text browser in your terminal
@@ -42,4 +43,8 @@ export PATH=$PATH:$HOME/.dotfiles/scripts
 
 # Alias to clear screen
 alias c=clear
+
+
+# Creating an Alias to get into scripts
+alias scripts='cd $SCRIPTS'
 

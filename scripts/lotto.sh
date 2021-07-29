@@ -23,7 +23,6 @@ mega_first_five_num (){
 }
 
 
-
 powerball_first_five_numbers(){
 
 
@@ -62,11 +61,17 @@ illinois_lotto_numbers(){
 
 }
 
-mega_ball_number(){
+megaball_number(){
 
 		n=$(shuf -i 1-25 -n 1) 1>/dev/null
 		return $n
 
+}
+
+powerball_number(){
+
+		n=$(shuf -i 1-26 -n 1) 1>/dev/null
+		return $n
 }
 
 #Clear screen

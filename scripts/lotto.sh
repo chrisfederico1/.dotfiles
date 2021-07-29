@@ -4,14 +4,14 @@
 
 # Function to get first 5 numbers of the mega millions lottery
 
-Mega_First_Five_Random_Num (){
+mega_first_five_num (){
 
 	    #This is how you declare a empty array in bash	
 		declare -a picks
 		# This is how you create a loop in Bash
 		for ((p = 1; p <= 5; ++p));do
 		    # This is how you initialize a variable in bash
-			#also take stnout stream 1 to /dev/null
+			#also take note of stdout stream 1 to /dev/null
 			n=$(shuf -i 1-70 -n 1) 1>/dev/null 
 		    # Add members to array picks. Notice the quotes.	
 			picks+=("$n")
@@ -24,9 +24,50 @@ Mega_First_Five_Random_Num (){
 
 
 
+powerball_first_five_numbers(){
 
-#Mega_First_Five_Random_Num
 
+	    #This is how you declare a empty array in bash	
+		declare -a picks
+		# This is how you create a loop in Bash
+		for ((p = 1; p <= 5; ++p));do
+		    # This is how you initialize a variable in bash
+			#also take note of stdout stream 1 to /dev/null
+			n=$(shuf -i 1-69 -n 1) 1>/dev/null 
+		    # Add members to array picks. Notice the quotes.	
+			picks+=("$n")
+	    done
+		# echo out the array notice the brackets 
+		echo "${picks[@]}"
+		
+
+}
+
+
+illinois_lotto_numbers(){
+
+	    #This is how you declare a empty array in bash	
+		declare -a picks
+		# This is how you create a loop in Bash
+		for ((p = 1; p <= 5; ++p));do
+		    # This is how you initialize a variable in bash
+			#also take note of stdout stream 1 to /dev/null
+			n=$(shuf -i 1-52 -n 1) 1>/dev/null 
+		    # Add members to array picks. Notice the quotes.	
+			picks+=("$n")
+	    done
+		# echo out the array notice the brackets 
+		echo "${picks[@]}"
+
+
+}
+
+mega_ball_number(){
+
+		n=$(shuf -i 1-25 -n 1) 1>/dev/null
+		return $n
+
+}
 
 #Clear screen
 #clear

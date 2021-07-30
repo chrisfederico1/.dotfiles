@@ -64,14 +64,17 @@ illinois_lotto_numbers(){
 megaball_number(){
 
 		n=$(shuf -i 1-25 -n 1) 1>/dev/null
-		return $n
+        echo "$n"
+
+
+
 
 }
 
 powerball_number(){
 
 		n=$(shuf -i 1-26 -n 1) 1>/dev/null
-		return $n
+		
 }
 
 #Clear screen
@@ -90,8 +93,62 @@ echo "1. Mega Millions"
 echo "2. PowerBall"
 echo "3. Illinois Lotto"
 
-read -p ">" game
+read -r -p ">" game
 
-echo "$game"
+#echo "$game"
 
+# check what game the user choose and continue
+
+if [ "$game" = 1 ]
+then
+		#ask how many megaball tickets 
+		echo "How many tickets do you want to play ? "
+		read -r -p ">" num_tickets
+		echo ""; echo "";
+		echo "Mega Million Numbers"
+		echo "===================="
+		echo ""
+
+		for ((t = 1; t <= "$num_tickets"; ++t));do
+				printf '%s %s\n' "$(mega_first_five_num)" "$(megaball_number)"
+				
+	done
+
+fi
+
+
+if [ "$game" = 2 ]
+then
+		#ask how many powerball tickets 
+		echo "How many tickets do you want to play ? "
+		read -r -p ">" num_tickets
+		echo ""; echo "";
+		echo "PowerBall Numbers"
+		echo "================="
+		echo ""
+
+		for ((t = 1; t <= "$num_tickets"; ++t));do
+				printf '%s %s\n' "$(powerball_first_five_numbers)" "$(powerball_number)"
+				
+	done
+
+fi
+
+
+if [ "$game" = 3 ]
+then
+		#ask how many Illinois tickets 
+		echo "How many tickets do you want to play ? "
+		read -r -p ">" num_tickets
+		echo ""; echo "";
+		echo "Illinois Numbers"
+		echo "================"
+		echo ""
+
+		for ((t = 1; t <= "$num_tickets"; ++t));do
+				printf '%s\n' "$(illinois_lotto_numbers)" 
+				
+	done
+
+fi
 

@@ -17,7 +17,7 @@ mega_first_five_num (){
 			picks+=("$n")
 	    done
 		# echo out the array notice the brackets 
-		echo "${picks[@]}"
+		echo "${picks[@]}" |tr " " "\n" | sort -n | tr "\n" " "
 		
 		
 }

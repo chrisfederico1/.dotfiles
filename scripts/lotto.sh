@@ -16,7 +16,12 @@ mega_first_five_num (){
 		    # Add members to array picks. Notice the quotes.	
 			picks+=("$n")
 	    done
-		# echo out the array notice the brackets 
+		# echo out the array notice the brackets. There is also 
+		# a sort in this command users tr to replace spaces with 
+		# line returns . Then the sort command happens. -n is sort
+		# Numerical .
+		# Then the last tr replaces line returns back to spaces
+
 		echo "${picks[@]}" |tr " " "\n" | sort -n | tr "\n" " "
 		
 		
@@ -36,7 +41,13 @@ powerball_first_five_numbers(){
 		    # Add members to array picks. Notice the quotes.	
 			picks+=("$n")
 	    done
-		# echo out the array notice the brackets 
+
+
+		# echo out the array notice the brackets. There is also 
+		# a sort in this command users tr to replace spaces with 
+		# line returns . Then the sort command happens. -n is sort
+		# Numerical .
+		# Then the last tr replaces line returns back to spaces
 		echo "${picks[@]}" |tr " " "\n" | sort -n | tr "\n" " " 	
 
 }
@@ -54,18 +65,23 @@ illinois_lotto_numbers(){
 		    # Add members to array picks. Notice the quotes.	
 			picks+=("$n")
 	    done
-		# echo out the array notice the brackets 
-		echo "${picks[@]}" |tr " " "\n" | sort -n | tr "\n" " " 	
+		 # echo out the array notice the brackets. There is also 	
+		 # a sort in this command users tr to replace spaces with 	
+         # line returns . Then the sort command happens. -n is so
+         # Numerical .Then the last tr replaces line returns back to spaces
+ 	echo "${picks[@]}" |tr " " "\n" | sort -n | tr "\n" " " 	
 
+ }
 
-}
 
 megaball_number(){
-		
+		# Uses tput to change color of text	
 		red=`tput bold``tput setaf 1`
 		reset=`tput sgr0`
 		n=$(shuf -i 1-25 -n 1) 1>/dev/null
-        echo "${red}$n ${reset}"
+        
+		# Change text to red then reset back 
+		echo "${red}$n ${reset}"
 
 
 
@@ -112,6 +128,7 @@ then
 		echo ""
 
 		for ((t = 1; t <= "$num_tickets"; ++t));do
+				# ToDo find out what %s means 
 				printf '%s %s\n' "$(mega_first_five_num)""$(megaball_number)"
 				
 	done

@@ -55,7 +55,7 @@ illinois_lotto_numbers(){
 			picks+=("$n")
 	    done
 		# echo out the array notice the brackets 
-		echo "${picks[@]}"
+		echo "${picks[@]}" |tr " " "\n" | sort -n | tr "\n" " " 	
 
 
 }

@@ -37,8 +37,7 @@ powerball_first_five_numbers(){
 			picks+=("$n")
 	    done
 		# echo out the array notice the brackets 
-		echo "${picks[@]}"
-		
+		echo "${picks[@]}" |tr " " "\n" | sort -n | tr "\n" " " 	
 
 }
 
@@ -62,9 +61,11 @@ illinois_lotto_numbers(){
 }
 
 megaball_number(){
-
+		
+		red=`tput setaf 1`
+		reset=`tput sgr0`
 		n=$(shuf -i 1-25 -n 1) 1>/dev/null
-        echo "$n"
+        echo "${red}$n ${reset}"
 
 
 
@@ -73,12 +74,14 @@ megaball_number(){
 
 powerball_number(){
 
+		red=`tput setaf 1`
+		reset=`tput sgr0`
 		n=$(shuf -i 1-26 -n 1) 1>/dev/null
-		
+	echo "${red}$n ${reset}"	
 }
 
 #Clear screen
-#clear
+clear
 
 # Ask player to pick game.
 
@@ -86,11 +89,9 @@ echo "Welcome to the lotto Good luck Chris"
 echo "===================================="
 echo
 echo
-
-
 echo "Pick which game you want to play:"
 echo "1. Mega Millions"
-echo "2. PowerBall"
+echo "2. Power Ball"
 echo "3. Illinois Lotto"
 
 read -r -p ">" game
@@ -101,7 +102,7 @@ read -r -p ">" game
 
 if [ "$game" = 1 ]
 then
-		#ask how many megaball tickets 
+		#ask how many mega million tickets 
 		echo "How many tickets do you want to play ? "
 		read -r -p ">" num_tickets
 		echo ""; echo "";
@@ -110,7 +111,7 @@ then
 		echo ""
 
 		for ((t = 1; t <= "$num_tickets"; ++t));do
-				printf '%s %s\n' "$(mega_first_five_num)" "$(megaball_number)"
+				printf '%s %s\n' "$(mega_first_five_num)""$(megaball_number)"
 				
 	done
 
@@ -128,7 +129,7 @@ then
 		echo ""
 
 		for ((t = 1; t <= "$num_tickets"; ++t));do
-				printf '%s %s\n' "$(powerball_first_five_numbers)" "$(powerball_number)"
+				printf '%s %s\n' "$(powerball_first_five_numbers)""$(powerball_number)"
 				
 	done
 

@@ -62,7 +62,7 @@ illinois_lotto_numbers(){
 
 megaball_number(){
 		
-		red=`tput setaf 1`
+		red=`tput bold``tput setaf 1`
 		reset=`tput sgr0`
 		n=$(shuf -i 1-25 -n 1) 1>/dev/null
         echo "${red}$n ${reset}"
@@ -74,7 +74,7 @@ megaball_number(){
 
 powerball_number(){
 
-		red=`tput setaf 1`
+		red=`tput bold``tput setaf 1`
 		reset=`tput sgr0`
 		n=$(shuf -i 1-26 -n 1) 1>/dev/null
 	echo "${red}$n ${reset}"	
@@ -95,8 +95,9 @@ echo "2. Power Ball"
 echo "3. Illinois Lotto"
 
 read -r -p ">" game
+echo
+echo
 
-#echo "$game"
 
 # check what game the user choose and continue
 

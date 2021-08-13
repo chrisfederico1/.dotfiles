@@ -76,8 +76,8 @@ illinois_lotto_numbers(){
 
 megaball_number(){
 		# Uses tput to change color of text	
-		red=`tput bold``tput setaf 1`
-		reset=`tput sgr0`
+		red=$(tput bold)$(tput setaf 1)
+		reset=$(tput sgr0)
 		n=$(shuf -i 1-25 -n 1) 1>/dev/null
         
 		# Change text to red then reset back 
@@ -90,8 +90,8 @@ megaball_number(){
 
 powerball_number(){
 
-		red=`tput bold``tput setaf 1`
-		reset=`tput sgr0`
+		red=$(tput bold)$(tput setaf 1)
+		reset=$(tput sgr0)
 		n=$(shuf -i 1-26 -n 1) 1>/dev/null
 	echo "${red}$n ${reset}"	
 }
@@ -129,7 +129,7 @@ then
 
 		for ((t = 1; t <= "$num_tickets"; ++t));do
 				# ToDo find out what %s means 
-				printf '%s %s\n' "$(mega_first_five_num)""$(megaball_number)"
+				printf '%s\n' "$(mega_first_five_num)""$(megaball_number)"
 				
 	done
 
@@ -147,7 +147,7 @@ then
 		echo ""
 
 		for ((t = 1; t <= "$num_tickets"; ++t));do
-				printf '%s %s\n' "$(powerball_first_five_numbers)""$(powerball_number)"
+				printf '%s\n' "$(powerball_first_five_numbers)""$(powerball_number)"
 				
 	done
 
@@ -169,5 +169,12 @@ then
 				
 	done
 
+fi
+
+# Error handling 
+
+if [ "$game" -lt 1 ] || [ "$game" -gt 3 ]
+then
+		echo "Please enter valid entry"
 fi
 

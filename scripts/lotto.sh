@@ -12,7 +12,12 @@ mega_first_five_num (){
 		for ((p = 1; p <= 5; ++p));do
 		    # This is how you initialize a variable in bash
 			#also take note of stdout stream 1 to /dev/null
-			n=$(shuf -i 1-70 -n 1) 1>/dev/null 
+			n=$(shuf -i 1-70 -n 1) 1>/dev/null
+
+			#Check to see if this value is in array if so generate another number
+			if [[ " ${picks[*]} " =~ " ${n} " ]]; then
+				n=$(shuf -i 1-70 -n 1) 1>/dev/null
+			fi
 		    # Add members to array picks. Notice the quotes.	
 			picks+=("$n")
 	    done
@@ -61,7 +66,7 @@ illinois_lotto_numbers(){
 		for ((p = 1; p <= 5; ++p));do
 		    # This is how you initialize a variable in bash
 			#also take note of stdout stream 1 to /dev/null
-			n=$(shuf -i 1-52 -n 1) 1>/dev/null 
+			n=$(shuf -i 1-45 -n 1) 1>/dev/null 
 		    # Add members to array picks. Notice the quotes.	
 			picks+=("$n")
 	    done

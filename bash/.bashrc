@@ -8,7 +8,7 @@
 # Environment Variables 
 export SCRIPTS=~/repos/.dotfiles/scripts
 export EDITOR=nvim
-export PATH=$PATH:$HOME/repos/.dotfiles/scripts
+export PATH="$PATH:$HOME/repos/.dotfiles/scripts:/home/chris/.local/bin/"
 
 ## Prompt configuration 
 # Original = PS1="\e[01;32m[\u@\h \W]\$ \e[m" 
@@ -55,4 +55,14 @@ alias c=clear
 
 # Creating an Alias to get into scripts
 alias scripts='cd $SCRIPTS'
+
+
+
+# PowerLine Configuration
+#
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+source /home/chris/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+
 

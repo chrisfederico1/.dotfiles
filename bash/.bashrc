@@ -8,7 +8,7 @@
 # Environment Variables 
 export SCRIPTS=~/repos/.dotfiles/scripts
 export EDITOR=nvim
-#export PATH="$PATH:$HOME/repos/.dotfiles/scripts:$HOME/.local/bin/:/home/chris/.local/lib/python3.10/site-packages/powerline/bindings/bash/"
+export PATH="$PATH:$HOME/repos/.dotfiles/scripts:$HOME/.local/bin/:/home/chris/.local/lib/python3.10/site-packages/powerline/bindings/bash/"
 
 ## Prompt configuration 
 # Original = PS1="\e[01;32m[\u@\h \W]\$ \e[m" 
@@ -65,4 +65,5 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 source /home/chris/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
 
-
+# NVM appliacation to install version of nodejs
+source /usr/share/nvm/init-nvm.sh

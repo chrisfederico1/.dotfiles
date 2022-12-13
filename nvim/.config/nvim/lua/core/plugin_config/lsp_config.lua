@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-ensure_installed = { "sumneko_lua"}
+ensure_installed = { "sumneko_lua", "html", "cssls", "ansiblels", "bashls", "clangd", "gopls", "yamlls", "terraformls", "jsonls", "marksman", "pylsp"}
 })
 
 local on_attach = function(_, _)
@@ -16,3 +16,17 @@ end
 
 
 require("lspconfig").sumneko_lua.setup {}
+require("lspconfig").html.setup {}
+require("lspconfig").cssls.setup {}
+require("lspconfig").ansiblels.setup {}
+require("lspconfig").bashls.setup {}
+require("lspconfig").clangd.setup {}
+require("lspconfig").gopls.setup {}
+require("lspconfig").yamlls.setup {}
+require("lspconfig").terraformls.setup {}
+require("lspconfig").jsonls.setup {}
+require("lspconfig").marksman.setup {}
+require("lspconfig").pylsp.setup {}
+
+
+

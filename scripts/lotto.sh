@@ -15,7 +15,7 @@ mega_first_five_num (){
 			n=$(shuf -i 1-70 -n 1) 1>/dev/null
 
 			#Check to see if this value is in array if so generate another number
-			if [[ " ${picks[*]} " =~ " ${n} " ]]; then
+			if [[ ${picks[*]} =~  ${n}  ]]; then
 				n=$(shuf -i 1-70 -n 1) 1>/dev/null
 			fi
 		    # Add members to array picks. Notice the quotes.	
@@ -45,7 +45,7 @@ powerball_first_five_numbers(){
 			n=$(shuf -i 1-69 -n 1) 1>/dev/null 
 	
 	#Check to see if this value is in array if so generate another number
-			if [[ " ${picks[*]} " =~ " ${n} " ]]; then
+			if [[  ${picks[*]}  =~  ${n}  ]]; then
 				n=$(shuf -i 1-69 -n 1) 1>/dev/null
 			fi
 
@@ -75,7 +75,7 @@ illinois_lotto_numbers(){
 			n=$(shuf -i 1-45 -n 1) 1>/dev/null 
 		  
 	#Check to see if this value is in array if so generate another number
-			if [[ " ${picks[*]} " =~ " ${n} " ]]; then
+			if [[  ${picks[*]}  =~  ${n}  ]]; then
 				n=$(shuf -i 1-45 -n 1) 1>/dev/null
 			fi
 

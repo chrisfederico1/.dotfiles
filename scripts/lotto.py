@@ -130,7 +130,7 @@ if game == 2:
     print("Here is your PowerBall Numbers")
     print("==============================")
     for t in range(0, num_tickets):
-        print(powerball_first_five_num(),  "\033[1;31;40m{}\033[0m".format(powerball_number()))
+        print(powerball_first_five_num(), "\033[1;31;40m{}\033[0m".format(powerball_number()))
 
 if game == 3:
     # Ask user how many tickets

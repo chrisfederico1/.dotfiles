@@ -7,4 +7,5 @@ require("core.plugin_config.lsp_config")
 require("core.plugin_config.vim-test")
 require("core.plugin_config.live-server")
 require("core.plugin_config.completions")
+require("core.plugin_config.indent_blankline")
 

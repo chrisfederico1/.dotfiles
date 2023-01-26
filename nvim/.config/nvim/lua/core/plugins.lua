@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'saadparwaiz1/cmp_luasnip'
   use "rafamadriz/friendly-snippets"
+  use "lukas-reineke/indent-blankline.nvim"
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",

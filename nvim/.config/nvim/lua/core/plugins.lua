@@ -43,6 +43,16 @@ return require('packer').startup(function(use)
     end,
     cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
   }
+  use {
+    "danymat/neogen",
+    config = function()
+        require('neogen').setup {}
+    end,
+    requires = "nvim-treesitter/nvim-treesitter",
+    -- Uncomment next line if you want to follow only stable versions
+    -- tag = "*"
+}
+
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'

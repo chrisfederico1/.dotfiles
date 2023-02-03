@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
     end,
     requires = "nvim-treesitter/nvim-treesitter",
     -- Uncomment next line if you want to follow only stable versions
-    -- tag = "*"
+    tag = "*"
 }
 
   -- My plugins here

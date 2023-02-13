@@ -65,3 +65,6 @@ source /home/chris/.local/lib/python3.10/site-packages/powerline/bindings/bash/p
 
 # NVM appliacation to install version of nodejs
 source /usr/share/nvm/init-nvm.sh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

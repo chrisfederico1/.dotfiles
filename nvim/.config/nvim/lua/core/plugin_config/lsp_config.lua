@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-ensure_installed = { "sumneko_lua", "html", "cssls", "ansiblels", "bashls", "clangd", "yamlls", "terraformls", "jsonls", "marksman", "pylsp", "tsserver"}
+ensure_installed = { "lua_ls", "html", "cssls", "ansiblels", "bashls", "clangd", "yamlls", "terraformls", "jsonls", "marksman", "pylsp", "tsserver"}
 })
 
 local on_attach = function(_, _)
@@ -14,25 +14,25 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").sumneko_lua.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" },
-      },
-      workspace = {
-        library = {
-          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-          [vim.fn.stdpath "config" .. "/lua"] = true,
-        },
-      },
-    },
-  }
-}
+-- require("lspconfig").lua_ls.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   settings = {
+--     Lua = {
+--       diagnostics = {
+--         globals = { "vim" },
+--       },
+--       workspace = {
+--         library = {
+--           [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+--           [vim.fn.stdpath "config" .. "/lua"] = true,
+--         },
+--       },
+--     },
+--   }
+-- }
 
-require("lspconfig").sumneko_lua.setup {}
+-- require("lspconfig").lua_ls.setup {}
 require("lspconfig").html.setup {}
 require("lspconfig").cssls.setup {}
 require("lspconfig").ansiblels.setup {}

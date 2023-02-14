@@ -11,7 +11,7 @@ vim.opt.autoread = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.swapfile = false
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '120'
 
 
 

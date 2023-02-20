@@ -54,6 +54,15 @@ alias c=clear
 # Creating an Alias to get into scripts
 alias scripts='cd $SCRIPTS'
 
+# git Alias
+alias gs='git status'
+alias gc='git commit'
+alias gp='git push'
+alias ga='git add'
+
+# Alias for list storage
+alias ll='ls -al'
+
 
 
 # PowerLine Configuration

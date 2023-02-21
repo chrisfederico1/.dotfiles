@@ -12,7 +12,7 @@ export PATH="$PATH:$HOME/repos/.dotfiles/scripts:$HOME/.local/bin/:/home/chris/.
 
 ## Prompt configuration 
 # Original = PS1="\e[01;32m[\u@\h \W]\$ \e[m" 
-export PS1="\[\033[01;32m\][\u@\h\[\033[00m\]:\[\033[01;34m\]\w]\[\033[00m\]\[\033[00;32m\]\$(git_branch)\[\033[00m\]\$ "
+# export PS1="\[\033[01;32m\][\u@\h\[\033[00m\]:\[\033[01;34m\]\w]\[\033[00m\]\[\033[00;32m\]\$(git_branch)\[\033[00m\]\$ "
 
 
 # Function for Searching the web using w3m text browser in your terminal

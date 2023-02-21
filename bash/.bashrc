@@ -62,14 +62,15 @@ alias ga='git add'
 # Alias for list storage
 alias ll='ls -al'
 
-
+# starship prompt
+eval "$(starship init bash)"
 
 # PowerLine Configuration
 #
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-source /home/chris/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+# powerline-daemon -q
+# POWERLINE_BASH_CONTINUATION=1
+# POWERLINE_BASH_SELECT=1
+# source /home/chris/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
 
 # NVM appliacation to install version of nodejs
 source /usr/share/nvm/init-nvm.sh
@@ -79,3 +80,33 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# set an icon based on the distro
+# make sure your font is compatible with https://github.com/lukas-w/font-logos
+case $_distro in
+    *kali*)                  ICON="ﴣ";;
+    *arch*)                  ICON="";;
+    *debian*)                ICON="";;
+    *raspbian*)              ICON="";;
+    *ubuntu*)                ICON="";;
+    *elementary*)            ICON="";;
+    *fedora*)                ICON="";;
+    *coreos*)                ICON="";;
+    *gentoo*)                ICON="";;
+    *mageia*)                ICON="";;
+    *centos*)                ICON="";;
+    *opensuse*|*tumbleweed*) ICON="";;
+    *sabayon*)               ICON="";;
+    *slackware*)             ICON="";;
+    *linuxmint*)             ICON="";;
+    *alpine*)                ICON="";;
+    *aosc*)                  ICON="";;
+    *nixos*)                 ICON="";;
+    *devuan*)                ICON="";;
+    *manjaro*)               ICON="";;
+    *rhel*)                  ICON="";;
+    *macos*)                 ICON="";;
+    *)                       ICON="";;
+esac
+
+export STARSHIP_DISTRO="$ICON"

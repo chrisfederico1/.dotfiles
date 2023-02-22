@@ -1,3 +1,5 @@
 [user]
 	name = chrisfederico1
 	email = chris.federico@yahoo.com
+[init]
+	defaultBranch = main

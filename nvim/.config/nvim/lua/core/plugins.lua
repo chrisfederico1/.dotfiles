@@ -24,6 +24,7 @@ return require('lazy').setup({
    'nvim-treesitter/nvim-treesitter',
    'vim-test/vim-test',
    'hrsh7th/nvim-cmp',
+   'mbbill/undotree',
    'hrsh7th/cmp-nvim-lsp',
    'L3MON4D3/LuaSnip',
    'christoomey/vim-tmux-navigator',

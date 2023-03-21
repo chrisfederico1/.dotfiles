@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # This is a lotto python script that asks to play powerball, MegaMillions or
 # Illinois Lottery
 

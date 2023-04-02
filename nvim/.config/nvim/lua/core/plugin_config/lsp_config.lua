@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-ensure_installed = { "lua_ls", "html", "cssls", "ansiblels", "bashls", "clangd", "yamlls", "terraformls", "jsonls", "marksman", "pylsp", "tsserver"}
+ensure_installed = { "lua_ls", "html", "cssls", "ansiblels", "bashls", "rust_analyzer", "clangd", "yamlls", "terraformls", "jsonls", "marksman", "pylsp", "tsserver"}
 })
 
 local on_attach = function(_, _)
@@ -44,6 +44,6 @@ require("lspconfig").jsonls.setup {}
 require("lspconfig").marksman.setup {}
 require("lspconfig").pylsp.setup {}
 require("lspconfig").tsserver.setup {}
-
+require'lspconfig'.rust_analyzer.setup{}
 
 

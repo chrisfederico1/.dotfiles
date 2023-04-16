@@ -33,8 +33,8 @@ alias ?='w3msearch'
 # Alias for different things
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias grep='egrep --color=auto'
-alias grep='fgrep --color=auto'
+# alias grep='egrep --color=auto'
+# alias grep='fgrep --color=auto'
 alias vi='nvim'
 alias vim='nvim'
 alias c=clear

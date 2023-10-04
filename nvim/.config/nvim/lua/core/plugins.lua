@@ -30,7 +30,7 @@ return require('lazy').setup({
    'christoomey/vim-tmux-navigator',
    'saadparwaiz1/cmp_luasnip',
    "rafamadriz/friendly-snippets",
-   "lukas-reineke/indent-blankline.nvim",
+   {"lukas-reineke/indent-blankline.nvim", main = "ibl",opts = {} },
    {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",

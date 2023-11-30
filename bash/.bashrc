@@ -10,7 +10,7 @@ export EDITOR=nvim
 # Environment Variables 
 export SCRIPTS=~/repos/.dotfiles/scripts
 export EDITOR=nvim
-export PATH="~/.local/bin:~/repos/.dotfiles/scripts:$PATH"
+export PATH="/opt/flutter/bin:~/.local/bin:~/repos/.dotfiles/scripts:$PATH"
 
 PS1='[\u@\h \W]\$ '
 

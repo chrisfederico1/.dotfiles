@@ -14,6 +14,7 @@ echo "----------------------------------------" >> $LOGFILE
 echo "$(date): Monitoring started for $SERVER" >> $LOGFILE
 
 while true; do
+    # Rotate logs if ile size exceeds 1 MB
     if [ $(stat --printf="%s" $LOGFILE) -gt 1048576 ]; then
         mv $LOGFILE "${LOGFILE}_$(date +%Y%m%d%H%M%S)"
         echo "$(date): Log file rotated" > $LOGFILE

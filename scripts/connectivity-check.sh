@@ -14,6 +14,11 @@ echo "----------------------------------------" >> $LOGFILE
 echo "$(date): Monitoring started for $SERVER" >> $LOGFILE
 
 while true; do
+    if [ $(stat --printf="%s" $LOGFILE) -gt 1048576 ]; then
+        mv $LOGFILE "${LOGFILE}_$(date +%Y%m%d%H%M%S)"
+        echo "$(date): Log file rotated" > $LOGFILE
+    fi
+    
     # Ping the server
     if ! ping -c 1 -W 2 $SERVER > /dev/null 2>&1; then
         echo "$(date): Internet connection lost to $SERVER" >> $LOGFILE
